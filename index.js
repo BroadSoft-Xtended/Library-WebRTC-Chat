@@ -1,1 +1,1 @@
-module.exports = {view: require('./lib/views/timer'), model: require('./lib/models/timer')};
+module.exports = {view: require('./lib/views/chat'), model: require('./lib/models/chat')};

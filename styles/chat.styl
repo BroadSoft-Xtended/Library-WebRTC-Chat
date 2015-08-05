@@ -1,0 +1,22 @@
+.bdsft-webrtc
+  .chat
+    position absolute
+    display none
+    border 1px solid black
+    .input
+      height 20px
+      display block
+      background #FFFFFF
+      border 1px solid #D6D6D6
+      color #606060
+      font-size 14px
+      padding 8px
+      border-radius 0
+    .messagesContent
+      height auto
+    
+    &.enableChat.enableDatachannel.started
+      display block
+      
+    &:not(.started) .input
+      {disabled}

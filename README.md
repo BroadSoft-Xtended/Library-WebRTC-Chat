@@ -1,10 +1,10 @@
-# Timer
+# Chat
 
-Displays a timer for an active call.
+Displays a chat interface over data channel.
 
-Model : bdsft_webrtc.default.timer
+Model : bdsft_webrtc.default.chat
 
-View : bdsft_webrtc.default.timerview
+View : bdsft_webrtc.default.chatview
 
 Dependencies : [SIP Stack](https://github.com/BroadSoft-Xtended/Library-WebRTC-SIPStack)
 
@@ -13,28 +13,28 @@ Dependencies : [SIP Stack](https://github.com/BroadSoft-Xtended/Library-WebRTC-S
 
 Element  |Type  |Description
 ---------|------|------------------------------------
-text     |div   |Displays the timer's current text.
+input    |div   |Displays the chat input for sending a message.
+messagesContent |div   |Displays the sent and received messages.
 
 ## Properties
 <a name="properties"></a>
 
 Property  |Type    |Description
 ----------|--------|----------------------------------
-text      |string  |The displayed text of the timer.
+input     |string  |The text typed into the input field.
 
 ## Configuration
 <a name="configuration"></a>
 
 Property         |Type     |Default  |Description
 -----------------|---------|---------|------------------------------------
-enableCallTimer  |boolean  |true     |True if the call timer is enabled.
+enableChat	     |boolean  |false    |True if the chat is enabled.
 
 ## Methods
 <a name="methods"></a>
 
 Method   |Parameters  |Description
 ---------|------------|-------------------
-start()  |            |Starts the timer.
-stop()   |            |Stops the timer.
+send()   |            |Sends the text from the input via data channel to the peer.
 
 

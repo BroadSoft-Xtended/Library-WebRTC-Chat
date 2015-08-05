@@ -16,12 +16,12 @@
 
     // chat.jade compiled template
     templatizer["chat"] = function tmpl_chat() {
-        return '<div class="bdsft-webrtc"><div class="chat classes bottomleft"><input type="text" class="input"/><div class="messagesContent"></div></div></div>';
+        return '<div class="bdsft-webrtc"><div class="chat classes bottomleft"><textarea class="input"></textarea><div class="messagesContent"></div></div></div>';
     };
 
     // message.jade compiled template
     templatizer["message"] = function tmpl_message() {
-        return '<div class="message"><span class="body"></span></div>';
+        return '<div class="message classes"><span class="body"></span></div>';
     };
 
     return templatizer;

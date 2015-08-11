@@ -26,7 +26,7 @@ describe('chat', function() {
   });
   it('dataReceived', function() {
     chat.enableChat = true;
-    eventbus.emit('dataReceived', {data: 'chat:received text'})
+    eventbus.emit('dataReceived', {data: {data: 'chat:received text'}})
     var id = new Date().getTime()
     expect(chat.messages[id].body).toEqual('received text');
     expect(chat.messages[id].direction).toEqual('incoming');

@@ -2,9 +2,7 @@
 
 Displays a chat interface over data channel.
 
-Model : bdsft_webrtc.default.chat
-
-View : bdsft_webrtc.default.chatview
+Namespace : bdsft_webrtc.default.chat
 
 Dependencies : [SIP Stack](https://github.com/BroadSoft-Xtended/Library-WebRTC-SIPStack)
 

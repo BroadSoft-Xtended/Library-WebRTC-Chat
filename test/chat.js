@@ -1,16 +1,19 @@
-test = require('../node_modules/webrtc-sipstack/test/includes/common')(require('../node_modules/webrtc-core/test/includes/common'));
+test = require('../node_modules/webrtc-sipstack/test/includes/common')(require('../node_modules/bdsft-sdk-test/lib/common'));
 describe('chat', function() {
 
   before(function(){
-    test.createCore('urlconfig');
-    test.createCore('eventbus');
-    test.createModelAndView('sipstack', {
-      sipstack: require('webrtc-sipstack')
-    });
+    test.createModelAndView('core', {
+  core: require('webrtc-core')
+}, 'urlconfig');
     test.createModelAndView('chat', {
       chat: require('../'),
-      sipstack: require('webrtc-sipstack')
+      sipstack: require('webrtc-sipstack'),
+      eventbus: require('bdsft-sdk-eventbus'),
+      debug: require('bdsft-sdk-debug'),
+      core: require('webrtc-core')
     });
+    eventbus = bdsft_client_instances.test.eventbus.eventbus;
+    sipstack = bdsft_client_instances.test.sipstack.sipstack;
   });
 
   it('enableChat', function() {
